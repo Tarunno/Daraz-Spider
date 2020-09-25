@@ -15,4 +15,4 @@
 #### These tags are basicall brands and dealers.
 ![](GIF/view3.gif)
 
-## NOTE: It's done only for Educational purpose and used publicly available data. 
+## NOTE: It's done only for Educational purpose and has used publicly available data. 
