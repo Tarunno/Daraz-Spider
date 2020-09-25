@@ -1,0 +1,30 @@
+{% extends 'spider/base.html' %}
+{% load static %}
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/smart-watches.css' %}">
+<div class="loader">
+	<img src="{% static 'img/loader.gif' %}">
+</div>
+<div class="smart-watches">
+	<div class="container">
+		<h1>Smart Watches</h1>
+		{% for item in data %}
+			<div class="items">
+				<div class="item">
+					<img src={{ item.image }}>
+					<p class="name"><a href="{{ item.Product_link }}">{{ item.Product | slice:40 }}...</a></p>
+					<p class="price">Price Now: {{ item.Price_now }}</p>
+					<p class="oldprice">Old Price: {{ item.Old_price }}</p>
+					<p class="save">Save: {{ item.Save }}</p>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+<script type="text/javascript">
+	var loader_gif = document.querySelector('.loader');
+	function my(){
+		loader_gif.style.display = 'block';
+	}
+</script>
+{% endblock %}

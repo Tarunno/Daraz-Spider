@@ -1,0 +1,81 @@
+.headphones-brand{
+	height: 270vh;
+	margin-top: 50px;
+}
+.headphones-brand h1{
+	margin-bottom: 20px;
+}
+.headphones-brand > .container{
+	width: 80%;
+	margin: auto;
+	height: 100%;
+}
+
+/*loader */
+.loader{
+	display: none;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 100vh;
+	background-color: #222222;
+	z-index: 10000;
+}
+.loader img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.headphones-brand .items{
+	width: 23%;
+	height: 365px;
+	float: left;
+	border: 0.001cm solid lightgray;
+	margin-left: 5px;
+	margin-bottom: 50px;
+}
+.headphones-brand .item{
+	width: 100%;
+	height: 350px;
+}
+.item img{
+	width: 100%;
+	height: 230px;
+}
+.item .name{
+	font-size: 20px;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+.item .name a{
+	text-decoration: none;
+	color: black;
+	font-weight: bolder;
+}
+.item .price{
+	font-size: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-weight: bolder;
+	color: gray;
+	margin-top: 10px;
+}
+.item .oldprice{
+	font-size: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-weight: bolder;
+	color: gray;
+	margin-top: 1px;
+}
+.items .save{
+	background-color: #a10e2c;
+	font-size: 19px;
+	color: white;
+	padding: 5px;
+	margin-top: 20px;
+}

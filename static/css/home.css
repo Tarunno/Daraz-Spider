@@ -1,0 +1,564 @@
+.home{
+	height: 430vh;
+	width: 100%;
+}
+
+.headphones h1{
+	margin-top: 60px;
+}
+.headphones > .container{
+	width: 70%;
+	margin: 20px auto;
+}
+.headphones .brands{
+	padding: 20px 0px;
+}
+.headphones .brands a{
+	padding: 5px 15px;
+	margin-right: 10px;
+	border-radius: 15px;
+	font-weight: bold;
+	background-color: #f2f2f2;
+	color: black;
+	transition: .2s;
+}
+.headphones .brands a:hover{
+	background-color: #a10e2c;
+	color: white;
+	transition: .2s;
+}
+
+/*loader */
+.loader{
+	display: none;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 100vh;
+	background-color:  #222222;
+	z-index: 10000;
+}
+.loader img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* carosol */
+.headphones .carosol{
+	height: 400px;
+	margin-bottom: 90px;
+}
+.headphones .carosol .carosol-container{
+	width: 100%;
+	margin: auto;
+	height: 100%;
+	overflow: hidden;
+}
+.headphones .carosol .carosol-container-inner{
+	margin-top: 10px;
+	height: 100%;
+	transition: .5s;
+}
+.headphones #arrow{
+	display: inline;
+	cursor: pointer;
+}
+.headphones #arrow img{
+	height: 40px;
+	width: 40px;
+}
+.headphones .left{
+	position: relative;
+	top: -230px;
+	margin-left: -50px;
+}
+.headphones .right{
+	position: relative;
+	top: -230px;
+	float: right;
+	margin-right: -50px;
+}
+.headphones .items{
+	height: 400px;
+	width: 227.2px;
+	margin-right: 10px;
+	float: left;
+	background-color: white;
+	border: .001cm solid lightgray;
+}
+.headphones .item{
+	width: 100%;
+	height: 360px;
+}
+.headphones .item img{
+	height: 250px;
+	width: 100%;
+}
+.headphones .item .name{
+	font-size: 20px;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+.headphones .item .name a{
+	text-decoration: none;
+	color: black;
+	font-weight: bolder;
+}
+.headphones .item .price{
+	font-size: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-weight: bolder;
+	color: gray;
+	margin-top: 10px;
+}
+.headphones .item .oldprice{
+	font-size: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-weight: bolder;
+	color: gray;
+	margin-top: 1px;
+}
+.headphones .items .save{
+	background-color: #a10e2c;
+	font-size: 19px;
+	color: white;
+	padding: 5px;
+}
+
+
+/* carosol 2 */
+.smart-watches .brands{
+	padding: 20px 0px;
+}
+.smart-watches .brands a{
+	padding: 5px 15px;
+	margin-right: 10px;
+	border-radius: 15px;
+	font-weight: bold;
+	background-color: #f2f2f2;
+	color: black;
+	transition: .2s;
+}
+.smart-watches .brands a:hover{
+	background-color: #a10e2c;
+	color: white;
+	transition: .2s;
+}
+.smart-watches > .container{
+	width: 70%;
+	margin: 20px auto;
+}
+.smart-watches .carosol2{
+	height: 400px;
+}
+.smart-watches .carosol2 .carosol-container2{
+	width: 100%;
+	margin: auto;
+	height: 100%;
+	overflow: hidden;
+}
+.smart-watches .carosol2 .carosol-container-inner2{
+	margin-top: 10px;
+	height: 100%;
+	transition: .5s;
+}
+.smart-watches #arrow{
+	display: inline;
+	cursor: pointer;
+}
+.smart-watches #arrow img{
+	height: 40px;
+	width: 40px;
+}
+.smart-watches .left2{
+	position: relative;
+	top: -230px;
+	margin-left: -50px;
+}
+.smart-watches .right2{
+	position: relative;
+	top: -230px;
+	float: right;
+	margin-right: -50px;
+}
+.smart-watches .items{
+	height: 400px;
+	width: 227.2px;
+	margin-right: 10px;
+	float: left;
+	background-color: white;
+	border: .001cm solid lightgray;
+}
+.smart-watches .item{
+	width: 100%;
+	height: 360px;
+}
+.smart-watches .item img{
+	height: 250px;
+	width: 100%;
+}
+.smart-watches .item .name{
+	font-size: 20px;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+.smart-watches .item .name a{
+	text-decoration: none;
+	color: black;
+	font-weight: bolder;
+}
+.smart-watches .item .price{
+	font-size: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-weight: bolder;
+	color: gray;
+	margin-top: 10px;
+}
+.smart-watches .item .oldprice{
+	font-size: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-weight: bolder;
+	color: gray;
+	margin-top: 1px;
+}
+.smart-watches .items .save{
+	background-color: #a10e2c;
+	font-size: 19px;
+	color: white;
+	padding: 5px;
+}
+
+
+/* carosol 3 */
+.mouse h1{
+	padding-top: 66px;
+}
+.mouse .brands{
+	padding: 20px 0px;
+}
+.mouse .brands a{
+	padding: 5px 15px;
+	margin-right: 10px;
+	border-radius: 15px;
+	font-weight: bold;
+	background-color: #f2f2f2;
+	color: black;
+	transition: .2s;
+}
+.mouse .brands a:hover{
+	background-color: #a10e2c;
+	color: white;
+	transition: .2s;
+}
+.mouse > .container{
+	width: 70%;
+	margin: 20px auto;
+}
+.mouse .carosol3{
+	height: 400px;
+}
+.mouse .carosol3 .carosol-container3{
+	width: 100%;
+	margin: auto;
+	height: 100%;
+	overflow: hidden;
+}
+.mouse .carosol3 .carosol-container-inner3{
+	margin-top: 10px;
+	height: 100%;
+	transition: .5s;
+}
+.mouse #arrow{
+	display: inline;
+	cursor: pointer;
+}
+.mouse #arrow img{
+	height: 40px;
+	width: 40px;
+}
+.mouse .left3{
+	position: relative;
+	top: -230px;
+	margin-left: -50px;
+}
+.mouse .right3{
+	position: relative;
+	top: -230px;
+	float: right;
+	margin-right: -50px;
+}
+.mouse .items{
+	height: 400px;
+	width: 227.2px;
+	margin-right: 10px;
+	float: left;
+	background-color: white;
+	border: .001cm solid lightgray;
+}
+.mouse .item{
+	width: 100%;
+	height: 360px;
+}
+.mouse .item img{
+	height: 250px;
+	width: 100%;
+}
+.mouse .item .name{
+	font-size: 20px;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+.mouse .item .name a{
+	text-decoration: none;
+	color: black;
+	font-weight: bolder;
+}
+.mouse .item .price{
+	font-size: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-weight: bolder;
+	color: gray;
+	margin-top: 10px;
+}
+.mouse .item .oldprice{
+	font-size: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-weight: bolder;
+	color: gray;
+	margin-top: 1px;
+}
+.mouse .items .save{
+	background-color: #a10e2c;
+	font-size: 19px;
+	color: white;
+	padding: 5px;
+}
+
+
+/* carosol 4 */
+.keyboards h1{
+	padding-top: 66px;
+}
+.keyboards .brands{
+	padding: 20px 0px;
+}
+.keyboards .brands a{
+	padding: 5px 15px;
+	margin-right: 10px;
+	border-radius: 15px;
+	font-weight: bold;
+	background-color: #f2f2f2;
+	color: black;
+	transition: .2s;
+}
+.keyboards .brands a:hover{
+	background-color: #a10e2c;
+	color: white;
+	transition: .2s;
+}
+.keyboards > .container{
+	width: 70%;
+	margin: 20px auto;
+}
+.keyboards .carosol4{
+	height: 400px;
+}
+.keyboards .carosol4 .carosol-container4{
+	width: 100%;
+	margin: auto;
+	height: 100%;
+	overflow: hidden;
+}
+.keyboards .carosol4 .carosol-container-inner4{
+	margin-top: 10px;
+	height: 100%;
+	transition: .5s;
+}
+.keyboards #arrow{
+	display: inline;
+	cursor: pointer;
+}
+.keyboards #arrow img{
+	height: 40px;
+	width: 40px;
+}
+.keyboards .left4{
+	position: relative;
+	top: -230px;
+	margin-left: -50px;
+}
+.keyboards .right4{
+	position: relative;
+	top: -230px;
+	float: right;
+	margin-right: -50px;
+}
+.keyboards .items{
+	height: 400px;
+	width: 227.2px;
+	margin-right: 10px;
+	float: left;
+	background-color: white;
+	border: .001cm solid lightgray;
+}
+.keyboards .item{
+	width: 100%;
+	height: 360px;
+}
+.keyboards .item img{
+	height: 250px;
+	width: 100%;
+}
+.keyboards .item .name{
+	font-size: 20px;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+.keyboards .item .name a{
+	text-decoration: none;
+	color: black;
+	font-weight: bolder;
+}
+.keyboards .item .price{
+	font-size: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-weight: bolder;
+	color: gray;
+	margin-top: 10px;
+}
+.keyboards .item .oldprice{
+	font-size: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-weight: bolder;
+	color: gray;
+	margin-top: 1px;
+}
+.keyboards .items .save{
+	background-color: #a10e2c;
+	font-size: 19px;
+	color: white;
+	padding: 5px;
+}
+
+
+/* carosol 5 */
+.spectacles h1{
+	padding-top: 66px;
+}
+.spectacles .brands{
+	padding: 20px 0px;
+}
+.spectacles .brands a{
+	padding: 5px 15px;
+	margin-right: 10px;
+	border-radius: 15px;
+	font-weight: bold;
+	background-color: #f2f2f2;
+	color: black;
+	transition: .2s;
+}
+.spectacles .brands a:hover{
+	background-color: #a10e2c;
+	color: white;
+	transition: .2s;
+}
+.spectacles > .container{
+	width: 70%;
+	margin: 20px auto;
+}
+.spectacles .carosol5{
+	height: 400px;
+}
+.spectacles .carosol5 .carosol-container5{
+	width: 100%;
+	margin: auto;
+	height: 100%;
+	overflow: hidden;
+}
+.spectacles .carosol5 .carosol-container-inner5{
+	margin-top: 10px;
+	height: 100%;
+	transition: .5s;
+}
+.spectacles #arrow{
+	display: inline;
+	cursor: pointer;
+}
+.spectacles #arrow img{
+	height: 40px;
+	width: 40px;
+}
+.spectacles .left5{
+	position: relative;
+	top: -230px;
+	margin-left: -50px;
+}
+.spectacles .right5{
+	position: relative;
+	top: -230px;
+	float: right;
+	margin-right: -50px;
+}
+.spectacles .items{
+	height: 400px;
+	width: 227.2px;
+	margin-right: 10px;
+	float: left;
+	background-color: white;
+	border: .001cm solid lightgray;
+}
+.spectacles .item{
+	width: 100%;
+	height: 360px;
+}
+.spectacles .item img{
+	height: 250px;
+	width: 100%;
+}
+.spectacles .item .name{
+	font-size: 20px;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+.spectacles .item .name a{
+	text-decoration: none;
+	color: black;
+	font-weight: bolder;
+}
+.spectacles .item .price{
+	font-size: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-weight: bolder;
+	color: gray;
+	margin-top: 10px;
+}
+.spectacles .item .oldprice{
+	font-size: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-weight: bolder;
+	color: gray;
+	margin-top: 1px;
+}
+.spectacles .items .save{
+	background-color: #a10e2c;
+	font-size: 19px;
+	color: white;
+	padding: 5px;
+}
