@@ -8,11 +8,11 @@
 
 ## Home page
 #### We will have 5 Carousels for five different types of product. And by using tags we will be able to grap more products.
-![](GIF/view2.gif)
+![](GIF/view3.gif)
 
 ## Product by brand
 #### Every Carousels has some tags bellow the section headings (e.g. Headphones) and we can get more products by using those tags.
 #### These tags are basicall brands and dealers.
-![](GIF/view3.gif)
+![](GIF/view2.gif)
 
 ## NOTE: It's done only for Educational purpose and has used publicly available data. 
