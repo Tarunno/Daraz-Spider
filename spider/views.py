@@ -2,10 +2,11 @@ from django.shortcuts import render
 import requests
 import time
 import random
+from termcolor import colored
 
 def get_time_span():
     span = random.uniform(0, 0.1)
-    print("        Time span (To avoid anti-scraper): ", span)
+    print(colored("        Time span (To avoid anti-scraper): " + str(span), 'cyan'))
     return span
 
 headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"}
@@ -37,7 +38,7 @@ def formater(pages):
 
 def get_headphones(brand=""):
     pages = list()
-    print(">> Fetching headphones...")
+    print(colored(">> Fetching headphones...", 'yellow'))
     if brand == "":
         brand = ['uiisii', 'remax', 'qkz', 'awei']
         brand_index = 0
@@ -58,12 +59,12 @@ def get_headphones(brand=""):
 
     data = list()
     data = formater(pages)
-    print(">> Headphones fetched!")
+    print(colored(">> Headphones fetched!", 'green'))
     return data
 
 def get_smart_watch(brand=""):
     pages = list()
-    print(">> Fetching smart watches...")
+    print(colored(">> Fetching smart watches...", 'yellow'))
     if brand == "":
         brand = ['xiaomi', 'havit', 'huawei', 'lenovo']
         brand_index = 0
@@ -84,12 +85,12 @@ def get_smart_watch(brand=""):
 
     data = list()
     data = formater(pages)
-    print(">> Smart watches fetched!")
+    print(colored(">> Smart watches fetched!", 'green'))
     return data
 
 def get_keyboard(brand=""):
     pages = list()
-    print(">> Fetching keyboards...")
+    print(colored(">> Fetching keyboards...", 'yellow'))
     if brand == "":
         brand = ['havit', 'logitech', 'a4tech', 'RAZER']
         brand_index = 0
@@ -111,12 +112,12 @@ def get_keyboard(brand=""):
 
     data = list()
     data = formater(pages)
-    print(">> Keyboards fetched!")
+    print(colored(">> Keyboards fetched!", 'green'))
     return data
 
 def get_mouse(brand=""):
     pages = list()
-    print(">> Fetching mice...")
+    print(colored(">> Fetching mice...", 'yellow'))
     if brand == "":
         brand = ['havit', 'logitech', 'a4tech', 'RAZER']
         brand_index = 0
@@ -137,16 +138,16 @@ def get_mouse(brand=""):
 
     data = list()
     data = formater(pages)
-    print(">> Mice fetched!")
+    print(colored(">> Mice fetched!", 'green'))
     return data
 
 
 def get_spectacles(brand=""):
-    print(">> Fetching spectacles...")
+    print(colored(">> Fetching spectacles...", 'yellow'))
     pages = list()
     if brand == "":
         brand_index = 0
-        for page in range(1, 5):
+        for page in range(1, 3):
             time_span = get_time_span()
             time.sleep(time_span)
             url = 'https://www.daraz.com.bd/mens-eyeglasses/?ajax=true&page='+str(page)
@@ -163,7 +164,7 @@ def get_spectacles(brand=""):
 
     data = list()
     data = formater(pages)
-    print(">> Spectacles fetched!")
+    print(colored(">> Spectacles fetched!", 'green'))
     return data
 
 

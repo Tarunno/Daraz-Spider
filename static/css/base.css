@@ -75,17 +75,15 @@ header a{
   text-align: center;
   bottom: 0px;
   z-index: 100;
-  color: crimson;
+  color: black;
   box-shadow: 5px 0px 10px #c9c9c9;
 }
 .footer .primary{
 	font-size: 17px;
-	color: crimson;
 	padding-top: 10px;
 	font-weight: bold;
 }
 .footer .secondary{
 	font-size: 13px;
-	color: crimson;
 	font-weight: bold;
 }
