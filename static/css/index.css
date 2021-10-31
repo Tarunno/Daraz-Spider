@@ -23,13 +23,10 @@ body, *{
 	transform: translate(-50%, -50%);
 }
 
-.container{
+.container-first{
 	height: 100vh;
 	width: 100%;
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/showcase.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/showcase.jpg') no-repeat center center/cover;
 }
 .container-text{
 	position: absolute;

@@ -3,6 +3,12 @@ import requests
 import time
 import random
 
+def get_time_span():
+    span = random.uniform(0, 0.1)
+    print("        Time span (To avoid anti-scraper): ", span)
+    return span
+
+headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"}
 
 def formater(pages):
     '''
@@ -31,123 +37,133 @@ def formater(pages):
 
 def get_headphones(brand=""):
     pages = list()
+    print(">> Fetching headphones...")
     if brand == "":
         brand = ['uiisii', 'remax', 'qkz', 'awei']
         brand_index = 0
         for page in range(1, 5):
-            time_span = random.randint(4, 8)
+            time_span = get_time_span()
             time.sleep(time_span)
-            url = 'https://www.daraz.com.bd/headphones-headsets/'+brand[brand_index]+'?ajax=true&page='+str(page)
-            data = requests.get(url).json()
+            url = 'https://www.daraz.com.bd/headphones-headsets/'+brand[brand_index]+'/?ajax=true&page='+str(page)
+            data = requests.get(url, headers=headers).json()
             pages.append(data['mods']['listItems'])
             brand_index += 1
     else:
-        for page in range(1, 2):
-            time_span = random.randint(4, 10)
+        for page in range(1, 3):
+            time_span = get_time_span()
             time.sleep(time_span)
             url = 'https://www.daraz.com.bd/headphones-headsets/'+brand+'/?ajax=true&page='+str(page)
-            data = requests.get(url).json()
+            data = requests.get(url,  headers=headers).json()
             pages.append(data['mods']['listItems'])
 
     data = list()
     data = formater(pages)
+    print(">> Headphones fetched!")
     return data
 
 def get_smart_watch(brand=""):
     pages = list()
+    print(">> Fetching smart watches...")
     if brand == "":
-        brand = ['tigers-123438037', 'abondon-123454678', 'sixfix-123454869', 'active4u-121042221']
+        brand = ['xiaomi', 'havit', 'huawei', 'lenovo']
         brand_index = 0
-        for page in range(1, 4):
-            time_span = random.randint(4, 8)
+        for page in range(1, 5):
+            time_span = get_time_span()
             time.sleep(time_span)
             url = 'https://www.daraz.com.bd/smart-watches/'+brand[brand_index]+'/?ajax=true&page='+str(page)
-            data = requests.get(url).json()
+            data = requests.get(url,  headers=headers).json()
             pages.append(data['mods']['listItems'])
             brand_index += 1
     else:
-        for page in range(1, 2):
-            time_span = random.randint(4, 10)
+        for page in range(1, 3):
+            time_span = get_time_span()
             time.sleep(time_span)
             url = 'https://www.daraz.com.bd/smart-watches/'+brand+'/?ajax=true&page='+str(page)
-            data = requests.get(url).json()
+            data = requests.get(url,  headers=headers).json()
             pages.append(data['mods']['listItems'])
 
     data = list()
     data = formater(pages)
+    print(">> Smart watches fetched!")
     return data
 
 def get_keyboard(brand=""):
     pages = list()
+    print(">> Fetching keyboards...")
     if brand == "":
-        brand = ['havit', 'jinmy-123395891', 'dealmaster-123450453', 'loftwell-123232663']
+        brand = ['havit', 'logitech', 'a4tech', 'RAZER']
         brand_index = 0
-        for page in range(1, 4):
-            time_span = random.randint(4, 8)
+        for page in range(1, 5):
+            time_span = get_time_span()
             time.sleep(time_span)
             url = 'https://www.daraz.com.bd/keyboard/'+brand[brand_index]+'/?ajax=true&page='+str(page)
-            data = requests.get(url).json()
+            data = requests.get(url,  headers=headers).json()
             pages.append(data['mods']['listItems'])
             brand_index += 1
     else:
-        for page in range(1, 2):
-            time_span = random.randint(4, 10)
+        for page in range(1, 3):
+            # time_span = random.randint(time_range['upper'], time_range['lower'])
+            time_span = get_time_span()
             time.sleep(time_span)
             url = 'https://www.daraz.com.bd/keyboard/'+brand+'/?ajax=true&page='+str(page)
-            data = requests.get(url).json()
+            data = requests.get(url,  headers=headers).json()
             pages.append(data['mods']['listItems'])
 
     data = list()
     data = formater(pages)
+    print(">> Keyboards fetched!")
     return data
 
 def get_mouse(brand=""):
     pages = list()
+    print(">> Fetching mice...")
     if brand == "":
-        brand = ['havit', 'trianglemall-123427289', 'udestiny-201122', 'quanbu-121063691']
+        brand = ['havit', 'logitech', 'a4tech', 'RAZER']
         brand_index = 0
-        for page in range(1, 4):
-            time_span = random.randint(4, 8)
+        for page in range(1, 5):
+            time_span = get_time_span()
             time.sleep(time_span)
             url = 'https://www.daraz.com.bd/computer-accessories-mouse/'+brand[brand_index]+'/?ajax=true&page='+str(page)
-            data = requests.get(url).json()
+            data = requests.get(url,  headers=headers).json()
             pages.append(data['mods']['listItems'])
             brand_index += 1
     else:
-        for page in range(1, 2):
-            time_span = random.randint(4, 10)
+        for page in range(1, 3):
+            time_span = get_time_span()
             time.sleep(time_span)
             url = 'https://www.daraz.com.bd/computer-accessories-mouse/'+brand+'/?ajax=true&page='+str(page)
-            data = requests.get(url).json()
+            data = requests.get(url,  headers=headers).json()
             pages.append(data['mods']['listItems'])
 
     data = list()
     data = formater(pages)
+    print(">> Mice fetched!")
     return data
 
 
 def get_spectacles(brand=""):
+    print(">> Fetching spectacles...")
     pages = list()
     if brand == "":
-        brand = ['etop', 'seelight-123286279', 'new-uttara-optics', 'eye-star-optics-123332615']
         brand_index = 0
-        for page in range(1, 4):
-            time_span = random.randint(4, 8)
+        for page in range(1, 5):
+            time_span = get_time_span()
             time.sleep(time_span)
-            url = 'https://www.daraz.com.bd/mens-eyeglasses/'+brand[brand_index]+'/?ajax=true&page='+str(page)
-            data = requests.get(url).json()
+            url = 'https://www.daraz.com.bd/mens-eyeglasses/?ajax=true&page='+str(page)
+            data = requests.get(url,  headers=headers).json()
             pages.append(data['mods']['listItems'])
             brand_index += 1
     else:
-        for page in range(1, 2):
-            time_span = random.randint(4, 10)
+        for page in range(1, 3):
+            time_span = get_time_span()
             time.sleep(time_span)
             url = 'https://www.daraz.com.bd/mens-eyeglasses/'+brand+'/?ajax=true&page='+str(page)
-            data = requests.get(url).json()
+            data = requests.get(url, headers=headers).json()
             pages.append(data['mods']['listItems'])
 
     data = list()
     data = formater(pages)
+    print(">> Spectacles fetched!")
     return data
 
 

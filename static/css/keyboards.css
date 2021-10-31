@@ -1,6 +1,7 @@
 .keyboards{
-	height: 270vh;
-	margin-top: 50px;
+	height: fit-content;
+	margin-top: 70px;
+	padding-bottom: 100px;
 }
 .keyboards h1{
 	margin-bottom: 20px;
@@ -8,7 +9,8 @@
 .keyboards > .container{
 	width: 80%;
 	margin: auto;
-	height: 100%;
+	height: fit-content;
+	margin-bottom: 1650px;
 }
 
 /*loader */

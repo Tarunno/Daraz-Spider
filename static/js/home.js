@@ -34,9 +34,6 @@ function go_left(){
 	carosol_container_inner.style.marginLeft = margin_now + 'px';
 }
 
-
-
-
 var carosol_container2 = document.querySelector('.carosol-container2'),
 	carosol_container_inner2 = document.querySelector('.carosol-container-inner2'),
 	carosol_items2 = document.querySelectorAll('.carosol-container2 .item');
@@ -72,9 +69,6 @@ function go_left2(){
 	}
 	carosol_container_inner2.style.marginLeft = margin_now2 + 'px';
 }
-
-
-
 
 var carosol_container3 = document.querySelector('.carosol-container3'),
 	carosol_container_inner3 = document.querySelector('.carosol-container-inner3'),
@@ -112,9 +106,6 @@ function go_left3(){
 	carosol_container_inner3.style.marginLeft = margin_now3 + 'px';
 }
 
-
-
-
 var carosol_container4 = document.querySelector('.carosol-container4'),
 	carosol_container_inner4 = document.querySelector('.carosol-container-inner4'),
 	carosol_items4 = document.querySelectorAll('.carosol-container4 .item');
@@ -150,10 +141,6 @@ function go_left4(){
 	}
 	carosol_container_inner4.style.marginLeft = margin_now4 + 'px';
 }
-
-
-
-
 
 var carosol_container5 = document.querySelector('.carosol-container5'),
 	carosol_container_inner5 = document.querySelector('.carosol-container-inner5'),
