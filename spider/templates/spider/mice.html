@@ -15,11 +15,28 @@
 					<p class="name"><a href="{{ item.Product_link }}" target="_blank">{{ item.Product | slice:40 }}...</a></p>
 					<p class="price">Price Now: {{ item.Price_now }}</p>
 					<p class="oldprice">Old Price: {{ item.Old_price }}</p>
+					<p style="display:inline" class="rating" data-rating={{item.rating}}></p>
+					<i style="font-size:13px; color:gray;" class="fa fa-user" aria-hidden="true"></i>
+					<p style="display:inline" class="count-rating">{{item.count_rating}}</p>
 					<p class="save">Save: {{ item.Save }}</p>
 				</div>
 			</div>
 		{% endfor %}
 	</div>
+	<script>
+		var rating = document.querySelectorAll('.mice .rating')
+		rating.forEach((item, index) => {
+			var ratingInt = parseInt(item.dataset.rating)
+			var ratingFloat = parseFloat(item.dataset.rating)
+			var extra = ratingFloat - ratingInt
+			for(var i=1; i<=ratingInt; i++){
+				item.innerHTML += `<i class="fa fa-star" aria-hidden="true"></i>`
+			}
+			if(extra >= 0.5){
+				item.innerHTML += `<i class="fa fa-star-half" aria-hidden="true"></i>`
+			}
+		})
+	</script>
 </div>
 <script type="text/javascript">
 	var loader_gif = document.querySelector('.loader');

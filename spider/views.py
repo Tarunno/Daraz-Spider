@@ -5,7 +5,7 @@ import random
 from termcolor import colored
 
 def get_time_span():
-    span = random.uniform(0, 0.1)
+    span = random.uniform(0.2, 0.5)
     print(colored("        Time span (To avoid anti-scraper): " + str(span), 'cyan'))
     return span
 
@@ -14,11 +14,12 @@ headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 def formater(pages):
     '''
     I need:
-        name, productUrl, image, originalPrice, price
+        name, productUrl, image, originalPrice, price, ratingScore, review
     '''
     data = list()
     for items in pages:
         for item in items:
+            print(item)
             dict = {}
             dict['Product'] =  item['name']
             dict['Price_now'] = float(item['price'])
@@ -32,6 +33,8 @@ def formater(pages):
             dict['Save'] = float(x - float(item['price']))
             dict['Product_link'] =  'https:'+item['productUrl']
             dict['image'] = item['image']
+            dict['rating'] = item['ratingScore']
+            dict['count_rating'] = item['review']
             data.append(dict)
     return data
 
@@ -42,7 +45,7 @@ def get_headphones(brand=""):
     if brand == "":
         brand = ['uiisii', 'remax', 'qkz', 'awei']
         brand_index = 0
-        for page in range(1, 5):
+        for page in range(1, 4):
             time_span = get_time_span()
             time.sleep(time_span)
             url = 'https://www.daraz.com.bd/headphones-headsets/'+brand[brand_index]+'/?ajax=true&page='+str(page)
@@ -68,7 +71,7 @@ def get_smart_watch(brand=""):
     if brand == "":
         brand = ['xiaomi', 'havit', 'huawei', 'lenovo']
         brand_index = 0
-        for page in range(1, 5):
+        for page in range(1, 4):
             time_span = get_time_span()
             time.sleep(time_span)
             url = 'https://www.daraz.com.bd/smart-watches/'+brand[brand_index]+'/?ajax=true&page='+str(page)
@@ -94,7 +97,7 @@ def get_keyboard(brand=""):
     if brand == "":
         brand = ['havit', 'logitech', 'a4tech', 'RAZER']
         brand_index = 0
-        for page in range(1, 5):
+        for page in range(1, 4):
             time_span = get_time_span()
             time.sleep(time_span)
             url = 'https://www.daraz.com.bd/keyboard/'+brand[brand_index]+'/?ajax=true&page='+str(page)
@@ -121,7 +124,7 @@ def get_mouse(brand=""):
     if brand == "":
         brand = ['havit', 'logitech', 'a4tech', 'RAZER']
         brand_index = 0
-        for page in range(1, 5):
+        for page in range(1, 4):
             time_span = get_time_span()
             time.sleep(time_span)
             url = 'https://www.daraz.com.bd/computer-accessories-mouse/'+brand[brand_index]+'/?ajax=true&page='+str(page)

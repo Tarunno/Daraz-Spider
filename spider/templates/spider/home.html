@@ -22,14 +22,31 @@
 							<div class="items">
 								<div class="item">
 									<img src={{ item.image }}>
-									<p class="name"><a href="{{ item.Product_link }}" target="_blank">{{ item.Product | slice:40}}...</a></p>
+									<p class="name"><a href="{{ item.Product_link }}" target="_blank">{{ item.Product | slice:30}}...</a></p>
 									<p class="price">Price Now: {{ item.Price_now }}</p>
 									<p class="oldprice">Old Price: {{ item.Old_price }}</p>
+									<p style="display:inline" class="rating" data-rating={{item.rating}}></p>
+									<i style="font-size:13px; color:gray;" class="fa fa-user" aria-hidden="true"></i>
+									<p style="display:inline" class="count-rating">{{item.count_rating}}</p>
 								</div>
 								<p class="save">Save: {{ item.Save }}</p>
 							</div>
 						{% endfor %}
 					</div>
+					<script>
+						var rating = document.querySelectorAll('.headphones .rating')
+						rating.forEach((item, index) => {
+							var ratingInt = parseInt(item.dataset.rating)
+							var ratingFloat = parseFloat(item.dataset.rating)
+							var extra = ratingFloat - ratingInt
+							for(var i=1; i<=ratingInt; i++){
+								item.innerHTML += `<i class="fa fa-star" aria-hidden="true"></i>`
+							}
+							if(extra >= 0.5){
+								item.innerHTML += `<i class="fa fa-star-half" aria-hidden="true"></i>`
+							}
+						})
+					</script>
 				</div>
 				<div id="arrow" class="left"><img src="{% static 'img/left.svg' %}" alt="left"></div>
 				<div id="arrow" class="right"><img src="{% static 'img/right.svg' %}" alt="right"></div>
@@ -52,14 +69,31 @@
 							<div class="items">
 								<div class="item">
 									<img src={{ item.image }}>
-									<p class="name"><a href="{{ item.Product_link }}" target="_blank">{{ item.Product | slice:40}}...</a></p>
+									<p class="name"><a href="{{ item.Product_link }}" target="_blank">{{ item.Product | slice:30}}...</a></p>
 									<p class="price">Price Now: {{ item.Price_now }}</p>
 									<p class="oldprice">Old Price: {{ item.Old_price }}</p>
+									<p style="display:inline" class="rating" data-rating={{item.rating}}></p>
+									<i style="font-size:13px; color:gray;" class="fa fa-user" aria-hidden="true"></i>
+									<p style="display:inline" class="count-rating">{{item.count_rating}}</p>
 								</div>
 								<p class="save">Save: {{ item.Save }}</p>
 							</div>
 						{% endfor %}
 					</div>
+					<script>
+						var rating = document.querySelectorAll('.smart-watches .rating')
+						rating.forEach((item, index) => {
+							var ratingInt = parseInt(item.dataset.rating)
+							var ratingFloat = parseFloat(item.dataset.rating)
+							var extra = ratingFloat - ratingInt
+							for(var i=1; i<=ratingInt; i++){
+								item.innerHTML += `<i class="fa fa-star" aria-hidden="true"></i>`
+							}
+							if(extra >= 0.5){
+								item.innerHTML += `<i class="fa fa-star-half" aria-hidden="true"></i>`
+							}
+						})
+					</script>
 				</div>
 				<div id="arrow" class="left2"><img src="{% static 'img/left.svg' %}" alt="left"></div>
 				<div id="arrow" class="right2"><img src="{% static 'img/right.svg' %}" alt="right"></div>
@@ -82,14 +116,31 @@
 							<div class="items">
 								<div class="item">
 									<img src={{ item.image }}>
-									<p class="name"><a href="{{ item.Product_link }}" target="_blank">{{ item.Product | slice:40}}...</a></p>
+									<p class="name"><a href="{{ item.Product_link }}" target="_blank">{{ item.Product | slice:30}}...</a></p>
 									<p class="price">Price Now: {{ item.Price_now }}</p>
 									<p class="oldprice">Old Price: {{ item.Old_price }}</p>
+									<p style="display:inline" class="rating" data-rating={{item.rating}}></p>
+									<i style="font-size:13px; color:gray;" class="fa fa-user" aria-hidden="true"></i>
+									<p style="display:inline" class="count-rating">{{item.count_rating}}</p>
 								</div>
 								<p class="save">Save: {{ item.Save }}</p>
 							</div>
 						{% endfor %}
 					</div>
+					<script>
+						var rating = document.querySelectorAll('.mouse .rating')
+						rating.forEach((item, index) => {
+							var ratingInt = parseInt(item.dataset.rating)
+							var ratingFloat = parseFloat(item.dataset.rating)
+							var extra = ratingFloat - ratingInt
+							for(var i=1; i<=ratingInt; i++){
+								item.innerHTML += `<i class="fa fa-star" aria-hidden="true"></i>`
+							}
+							if(extra >= 0.5){
+								item.innerHTML += `<i class="fa fa-star-half" aria-hidden="true"></i>`
+							}
+						})
+					</script>
 				</div>
 				<div id="arrow" class="left3"><img src="{% static 'img/left.svg' %}" alt="left"></div>
 				<div id="arrow" class="right3"><img src="{% static 'img/right.svg' %}" alt="right"></div>
@@ -112,14 +163,31 @@
 							<div class="items">
 								<div class="item">
 									<img src={{ item.image }}>
-									<p class="name"><a href="{{ item.Product_link }}" target="_blank">{{ item.Product | slice:40}}...</a></p>
+									<p class="name"><a href="{{ item.Product_link }}" target="_blank">{{ item.Product | slice:30}}...</a></p>
 									<p class="price">Price Now: {{ item.Price_now }}</p>
 									<p class="oldprice">Old Price: {{ item.Old_price }}</p>
+									<p style="display:inline" class="rating" data-rating={{item.rating}}></p>
+									<i style="font-size:13px; color:gray;" class="fa fa-user" aria-hidden="true"></i>
+									<p style="display:inline" class="count-rating">{{item.count_rating}}</p>
 								</div>
 								<p class="save">Save: {{ item.Save }}</p>
 							</div>
 						{% endfor %}
 					</div>
+					<script>
+						var rating = document.querySelectorAll('.keyboards .rating')
+						rating.forEach((item, index) => {
+							var ratingInt = parseInt(item.dataset.rating)
+							var ratingFloat = parseFloat(item.dataset.rating)
+							var extra = ratingFloat - ratingInt
+							for(var i=1; i<=ratingInt; i++){
+								item.innerHTML += `<i class="fa fa-star" aria-hidden="true"></i>`
+							}
+							if(extra >= 0.5){
+								item.innerHTML += `<i class="fa fa-star-half" aria-hidden="true"></i>`
+							}
+						})
+					</script>
 				</div>
 				<div id="arrow" class="left4"><img src="{% static 'img/left.svg' %}" alt="left"></div>
 				<div id="arrow" class="right4"><img src="{% static 'img/right.svg' %}" alt="right"></div>
@@ -136,14 +204,31 @@
 							<div class="items">
 								<div class="item">
 									<img src={{ item.image }}>
-									<p class="name"><a href="{{ item.Product_link }}" target="_blank">{{ item.Product | slice:40}}...</a></p>
+									<p class="name"><a href="{{ item.Product_link }}" target="_blank">{{ item.Product | slice:30}}...</a></p>
 									<p class="price">Price Now: {{ item.Price_now }}</p>
 									<p class="oldprice">Old Price: {{ item.Old_price }}</p>
+									<p style="display:inline" class="rating" data-rating={{item.rating}}></p>
+									<i style="font-size:13px; color:gray;" class="fa fa-user" aria-hidden="true"></i>
+									<p style="display:inline" class="count-rating">{{item.count_rating}}</p>
 								</div>
 								<p class="save">Save: {{ item.Save }}</p>
 							</div>
 						{% endfor %}
 					</div>
+					<script>
+						var rating = document.querySelectorAll('.spectacles .rating')
+						rating.forEach((item, index) => {
+							var ratingInt = parseInt(item.dataset.rating)
+							var ratingFloat = parseFloat(item.dataset.rating)
+							var extra = ratingFloat - ratingInt
+							for(var i=1; i<=ratingInt; i++){
+								item.innerHTML += `<i class="fa fa-star" aria-hidden="true"></i>`
+							}
+							if(extra >= 0.5){
+								item.innerHTML += `<i class="fa fa-star-half" aria-hidden="true"></i>`
+							}
+						})
+					</script>
 				</div>
 				<div id="arrow" class="left5"><img src="{% static 'img/left.svg' %}" alt="left"></div>
 				<div id="arrow" class="right5"><img src="{% static 'img/right.svg' %}" alt="right"></div>
